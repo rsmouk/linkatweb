@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getSharedFolder } from "@/lib/share";
-import { AppDownloadCard } from "../app-download-card";
+import { AppDownloadCard } from "../../app-download-card";
 import { FolderView } from "./folder-view";
 
 type Props = {
