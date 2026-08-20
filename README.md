@@ -2,7 +2,7 @@
 
 موقع يعرض روابط المجلد المشارك من نفس قاعدة **Supabase** المستخدمة في تطبيق Flutter.
 
-المسار: `/import/CODE` (مثل `https://linkat.hesdev.com/import/ABC123`)
+المسار: `/import/CODE` (مثل `https://linkatweb.vercel.app/import/ABC123`)
 
 ## التشغيل محلياً
 
@@ -24,7 +24,6 @@ npm run dev
 4. أضف متغيرات البيئة:
    - `SUPABASE_URL`
    - `SUPABASE_ANON_KEY`
-5. Deploy.
-6. اربط النطاق `linkat.hesdev.com` من Vercel → Domains.
+5. Deploy. الموقع سيكون على `https://linkatweb.vercel.app`.
 
 بعد الربط، روابط المشاركة من التطبيق تفتح هذه الصفحة وتعرض الروابط من `get_shared_folder_by_code`.

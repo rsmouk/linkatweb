@@ -10,11 +10,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { code } = await params;
   const folder = await getSharedFolder(code).catch(() => null);
   if (!folder) {
-    return { title: "المجلد غير متاح — لينكات" };
+    return { title: "Folder unavailable — Linkat" };
   }
   return {
-    title: `${folder.name} — لينكات`,
-    description: `${folder.links.length} روابط مشاركة من تطبيق لينكات`,
+    title: `${folder.name} — Linkat`,
+    description: `${folder.links.length} shared links from Linkat`,
   };
 }
 
@@ -37,17 +37,17 @@ export default async function ImportPage({ params }: Props) {
       </header>
       {configError ? (
         <section className="card empty">
-          <h1>تعذر الاتصال بقاعدة البيانات</h1>
-          <p className="meta">تحقق من متغيرات SUPABASE_URL و SUPABASE_ANON_KEY.</p>
+          <h1>Could not connect to the database</h1>
+          <p className="meta">Check the SUPABASE_URL and SUPABASE_ANON_KEY environment variables.</p>
         </section>
       ) : folder ? (
         <FolderView folder={folder} />
       ) : (
         <section className="card empty">
-          <h1>المجلد غير موجود أو انتهت صلاحيته</h1>
-          <p className="meta">روابط المشاركة صالحة لمدة 24 ساعة فقط.</p>
+          <h1>This folder is missing or expired</h1>
+          <p className="meta">Share links are valid for 24 hours only.</p>
           <a className="btn btn-ghost" href="/">
-            العودة
+            Back
           </a>
         </section>
       )}

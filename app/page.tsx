@@ -22,20 +22,20 @@ export default function HomePage() {
         <div className="logo">LINKAT</div>
       </header>
       <section className="card">
-        <h1>فتح مجلد مشارك</h1>
+        <h1>Open a shared folder</h1>
         <p className="meta">
-          الصق رابط المشاركة أو الكود المختصر من تطبيق لينكات لعرض الروابط.
+          Paste a Linkat share link or short code to view the folder links.
         </p>
         <form className="home-form" onSubmit={onSubmit}>
           <input
             className="search"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            placeholder="الرابط أو الكود"
+            placeholder="Share link or code"
             autoFocus
           />
           <button className="btn btn-primary" type="submit">
-            عرض المجلد
+            View folder
           </button>
         </form>
       </section>

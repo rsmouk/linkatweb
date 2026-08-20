@@ -18,10 +18,14 @@ function safeHost(url: string): string {
 function formatExpiry(iso: string): string {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("ar", {
+  return new Intl.DateTimeFormat("en", {
     dateStyle: "medium",
     timeStyle: "short",
   }).format(date);
+}
+
+function linkLabel(count: number): string {
+  return count === 1 ? "1 link" : `${count} links`;
 }
 
 export function FolderView({ folder }: { folder: SharedFolder }) {
@@ -31,12 +35,12 @@ export function FolderView({ folder }: { folder: SharedFolder }) {
     <section className="card">
       <h1>{folder.name}</h1>
       <p className="meta">
-        {folder.links.length} روابط · ينتهي {formatExpiry(folder.expires_at)} ·{" "}
+        {linkLabel(folder.links.length)} · expires {formatExpiry(folder.expires_at)} ·{" "}
         {folder.short_code}
       </p>
       <div className="actions">
         <a className="btn btn-primary" href={appLink}>
-          فتح في تطبيق لينكات
+          Open in Linkat
         </a>
       </div>
       <div className="list">

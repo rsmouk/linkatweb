@@ -1,13 +1,12 @@
 :root {
-  --bg: #07131c;
-  --bg-2: #0d2230;
-  --card: rgba(16, 42, 58, 0.72);
-  --stroke: rgba(140, 210, 230, 0.16);
-  --text: #f4fbff;
-  --muted: #9bb4c2;
-  --accent: #3ecf8e;
-  --accent-2: #7ee0ff;
-  --danger: #ff8a8a;
+  --bg: #ffffff;
+  --card: #ffffff;
+  --stroke: #e6e8eb;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #111827;
+  --danger: #b42318;
+  --row: #f8fafc;
 }
 
 * {
@@ -18,10 +17,7 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #12384a 0%, transparent 55%),
-    radial-gradient(900px 500px at 110% 10%, #0e4636 0%, transparent 50%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -47,14 +43,15 @@ a {
   font-weight: 800;
   letter-spacing: 0.04em;
   font-size: 1.15rem;
+  color: var(--text);
+  text-decoration: none;
 }
 
 .card {
   background: var(--card);
   border: 1px solid var(--stroke);
-  border-radius: 22px;
-  padding: 22px;
-  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 24px;
 }
 
 h1 {
@@ -81,20 +78,22 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 999px;
+  border-radius: 10px;
   padding: 10px 16px;
   text-decoration: none;
   font-weight: 700;
   border: 1px solid transparent;
+  cursor: pointer;
+  font: inherit;
 }
 
 .btn-primary {
   background: var(--accent);
-  color: #042016;
+  color: #ffffff;
 }
 
 .btn-ghost {
-  background: transparent;
+  background: #ffffff;
   border-color: var(--stroke);
   color: var(--text);
 }
@@ -109,17 +108,22 @@ h1 {
   gap: 12px;
   align-items: center;
   padding: 12px;
-  border-radius: 16px;
-  background: rgba(7, 19, 28, 0.45);
+  border-radius: 14px;
+  background: var(--row);
   border: 1px solid var(--stroke);
   text-decoration: none;
+}
+
+.link-row:hover {
+  border-color: #d1d5db;
 }
 
 .favicon {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: #123;
+  background: #ffffff;
+  border: 1px solid var(--stroke);
   object-fit: cover;
   flex: 0 0 auto;
 }
@@ -136,12 +140,17 @@ h1 {
 
 .search {
   width: 100%;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid var(--stroke);
-  background: rgba(7, 19, 28, 0.55);
+  background: #ffffff;
   color: var(--text);
   padding: 12px 14px;
   font: inherit;
+}
+
+.search:focus {
+  outline: 2px solid #111827;
+  outline-offset: 1px;
 }
 
 .home-form {

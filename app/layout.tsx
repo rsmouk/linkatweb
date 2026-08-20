@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const arabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic", "latin"],
+const inter = Inter({
+  subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "لينكات — مشاركة المجلد",
-  description: "عرض روابط المجلد المشارك من تطبيق لينكات",
+  title: "Linkat — Shared folder",
+  description: "View shared folder links from the Linkat app",
 };
 
 export default function RootLayout({
@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className={arabic.className}>{children}</body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
