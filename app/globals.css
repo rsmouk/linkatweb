@@ -1,0 +1,159 @@
+:root {
+  --bg: #07131c;
+  --bg-2: #0d2230;
+  --card: rgba(16, 42, 58, 0.72);
+  --stroke: rgba(140, 210, 230, 0.16);
+  --text: #f4fbff;
+  --muted: #9bb4c2;
+  --accent: #3ecf8e;
+  --accent-2: #7ee0ff;
+  --danger: #ff8a8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #12384a 0%, transparent 55%),
+    radial-gradient(900px 500px at 110% 10%, #0e4636 0%, transparent 50%),
+    var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+.shell {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-size: 1.15rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 22px;
+  padding: 22px;
+  backdrop-filter: blur(16px);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.7rem;
+  line-height: 1.35;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #042016;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--stroke);
+  color: var(--text);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.link-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(7, 19, 28, 0.45);
+  border: 1px solid var(--stroke);
+  text-decoration: none;
+}
+
+.favicon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #123;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  display: block;
+}
+
+.domain {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.search {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: rgba(7, 19, 28, 0.55);
+  color: var(--text);
+  padding: 12px 14px;
+  font: inherit;
+}
+
+.home-form {
+  display: grid;
+  gap: 12px;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 12px;
+}
