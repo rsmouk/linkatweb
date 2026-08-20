@@ -166,3 +166,42 @@ h1 {
   text-align: center;
   padding: 40px 12px;
 }
+
+.download-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: #ffffff;
+  text-decoration: none;
+}
+
+.download-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.download-card-text strong {
+  font-size: 0.92rem;
+}
+
+.download-card-text span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.download-card-cta {
+  flex: 0 0 auto;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}

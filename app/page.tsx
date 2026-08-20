@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
+import { AppDownloadCard } from "./app-download-card";
+
 export default function HomePage() {
   const router = useRouter();
   const [value, setValue] = useState("");
@@ -21,6 +23,7 @@ export default function HomePage() {
       <header className="brand">
         <div className="logo">LINKAT</div>
       </header>
+      <AppDownloadCard />
       <section className="card">
         <h1>Open a shared folder</h1>
         <p className="meta">

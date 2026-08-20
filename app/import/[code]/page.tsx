@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getSharedFolder } from "@/lib/share";
+import { AppDownloadCard } from "../app-download-card";
 import { FolderView } from "./folder-view";
 
 type Props = {
@@ -35,6 +36,7 @@ export default async function ImportPage({ params }: Props) {
           LINKAT
         </a>
       </header>
+      <AppDownloadCard />
       {configError ? (
         <section className="card empty">
           <h1>Could not connect to the database</h1>
